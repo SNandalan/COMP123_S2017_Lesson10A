@@ -28,6 +28,15 @@ namespace COMP123_S2017_Lesson10A
             superVillain.AddPower("Combat Senses", 30);
             Console.WriteLine(superVillain.ToString());
             Console.WriteLine("Malice: " + superVillain.Malice);
+
+            if(superHero is IHasMalice)
+            {
+                Console.WriteLine("Super Dude is definitely a SuperHero!");
+            }
+            else
+            {
+                Console.WriteLine("Super Dude is not a SuperVillain!");
+            }
         }
     }
 }
