@@ -7,7 +7,7 @@ using System.Threading.Tasks;
  * Name: Sushmita Nandalan
  * Date: July 13, 2017
  * Description: This is the SuperHuman class that extends the Human abstract class
- * Version: 0.7 - Added the DisplaySkills stub method to satisfy the Human super class requirements
+ * Version: 0.6 - Added the _findPowerIndex private method
  */
 namespace COMP123_S2017_Lesson10A
 {
@@ -46,7 +46,33 @@ namespace COMP123_S2017_Lesson10A
         {
             this._powers = new List<Power>();
         }
-
+        /// <summary>
+         /// This private method returns the index of the Power Name in the Powers List if found.
+         /// If not found it returns -1
+         /// </summary>
+         /// <param name="name"></param>
+         /// <returns>This returns an integer related to the index of the Powers List</returns>
+         private int _findPowerIndex(string name)
+         {
+             int index = 0;
+ 
+             foreach (Power power in this.Powers)
+             {
+                 if(name.Equals(power.Name))
+                 {
+                     break;
+                 }
+ 
+                 index++;
+ 
+                 if(this.Powers.Count == index)
+                 {
+                     index = -1;
+                 }
+             }
+ 
+             return index;
+         }
         // PUBLIC METHODS
 
         /// <summary>
