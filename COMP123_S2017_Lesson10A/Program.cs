@@ -14,10 +14,13 @@ namespace COMP123_S2017_Lesson10A
     {
         static void Main(string[] args)
         {
-            SuperHuman superHuman = new SuperHuman("Super Dude");
-            superHuman.Powers.Add(new Power("Spider Cloning", 50));
-            superHuman.Powers.Add(new Power("Teleporting", 40));
-            Console.WriteLine(superHuman.ToString());
+            SuperHero superHero = new SuperHero("SuperHero Dude", 20);
+            superHero.Powers.Add(new Power("Teleportation", 50));
+            superHero.Powers.Add(new Power("Phasing", 40));
+            superHero.Powers.Add(new Power("Invisibility", 30));
+            Console.WriteLine(superHero.ToString());
+            Console.WriteLine("Karma: " + superHero.Karma);
+            Console.WriteLine();
 
             SuperVillain superVillain = new SuperVillain("SuperVillain Dude", 20);
             superVillain.AddPower("Shadow Casting", 50);

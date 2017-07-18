@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  */
 namespace COMP123_S2017_Lesson10A
 {
-    public interface IHasKarma
+    public interface IHasKarma 
     {
         // PRIVATE INSTANCE VARIABLES
 

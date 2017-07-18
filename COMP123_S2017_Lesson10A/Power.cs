@@ -9,7 +9,7 @@ using System.Text;
  */
 namespace COMP123_S2017_Lesson10A
 {
-    public class Power
+    public struct Power
     {
         /// <summary>
         /// The Power class contains the data and structure of the each Super Power. 
