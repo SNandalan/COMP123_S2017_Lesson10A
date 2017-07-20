@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 /*Name: Sushmita Nandalan
  * Date: July 11th 2017
  * Description: This is the driver class for my project
- * Version: 0.2 - Added SuperHuman object and displayed it
+ * * Version: 0.9 - Implemented the SuperVillain > and < overloaded operator methods
  */
 namespace COMP123_S2017_Lesson10A
 {
@@ -29,8 +29,22 @@ namespace COMP123_S2017_Lesson10A
             Console.WriteLine(superVillain.ToString());
             Console.WriteLine("Malice: " + superVillain.Malice);
 
-            Console.WriteLine();
-            Console.WriteLine(superVillain._findPowerIndex("Spider Senses"));
+            if (superVillain.GetPower("Shadow Casting") >
+                 superVillain.GetPower("Combat Senses"))
+            {
+                Console.WriteLine("Shadow Casting is more powerful than Combat Senses");
+            }
+
+            if (superVillain.GetPower("Combat Senses") >
+                superVillain.GetPower("Mind Control"))
+            {
+                Console.WriteLine("Combat Senses is more powerful than Mind Control");
+            }
+            else
+            {
+                Console.WriteLine("Combat Senses is weaker than Mind Control");
+            }
+
         }
     }
 }
